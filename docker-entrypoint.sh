@@ -3,6 +3,8 @@
 set -e
 COMMAND=$1
 
+echo $COMMAND
+
 # Run commands
 if [ "$COMMAND" = 'up' ];
 then
@@ -20,7 +22,7 @@ user=$USERNAME:$PASSWORD
 EOF
 
     echo "> Starting server"
-    turnserver -c turnserver.conf
+    turnserver -a -c turnserver.conf
 
 else
 

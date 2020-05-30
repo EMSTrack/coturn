@@ -20,7 +20,7 @@ ENV PASSWORD=$BUILD_PASSWORD
 RUN set -x && \
     apt-get update -y && \
     apt-get install -y apt-utils && \
-    apt-get install -y dumb-init git
+    apt-get install -y dumb-init git coturn
 
 # Entrypoint script
 COPY docker-entrypoint.sh $SCRIPT_HOME/docker-entrypoint.sh
